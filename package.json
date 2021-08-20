@@ -9,6 +9,7 @@
   "author": "Avikal Shukla",
   "license": "ISC",
   "dependencies": {
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "serve-favicon": "^2.5.0"
   }
 }
