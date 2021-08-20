@@ -1,0 +1,14 @@
+{
+  "name": "web-chat",
+  "version": "1.0.0",
+  "description": "A Simple Web Chat Application.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Avikal Shukla",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
