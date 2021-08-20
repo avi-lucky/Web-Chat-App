@@ -2,194 +2,273 @@
 <html lang="en">
 
 <head>
-  <title>Web Chat-App</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="/home/celticlab/Downloads/chatapp.png"/>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="./index.css">
+    <title>Web Chat-App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./img/favicon.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
 </head>
 
 <body>
 
-  <nav class="navbar navbar-inverse" style="background: rgba(91, 159, 223, 0.767);">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#" style="color: black;">Web Chat-App</a>
-      </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" style="color: black;"><span class="glyphicon glyphicon-log-out" style="color: black;"></span>
-            Log Out</a></li>
-      </ul>
+    <nav class="navbar navbar-inverse" style="background: rgba(91, 159, 223, 0.767);">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#" style="color: black;">Web Chat-App</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" style="color: black;"><span class="glyphicon glyphicon-log-out"
+                            style="color: black;"></span>
+                        Log Out</a></li>
+            </ul>
+        </div>
+    </nav>
+
+        <div class="column left" style="background-color:rgb(235, 235, 235);height: 700px;">
+            <div class="header"
+                style="font-size:20px;margin-top: 5px;background: rgb(177, 177, 177);padding: 10px 15px;border-radius: 7px;">
+                Friends</h2>
+                <a style="font-size:24px;float: right;" href="http://localhost:3000/addUser" class="fa">&#xf067;</a>
+            </div>
+            <hr>
+            <div class="row-8" style="height: 640px;overflow:auto;">
+            <div class="friend-list">
+                <img class="profile-image"
+                    src="https://cdn.dribbble.com/users/1577045/screenshots/4914645/dribble_pic.png?compress=1&resize=400x300"
+                    alt="">
+                <div class="text">
+                    <h6>Avikal</h6>
+                    <p class="text-muted">What's Your Update?</p>
+                </div>
+                <span class="time text-muted small">01:32</span>
+            </div>
+
+            <div class="friend-list">
+                <img class="profile-image"
+                    src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/optimus-prime.jpeg" alt="">
+                <div class="text">
+                    <h6>Aayush</h6>
+                    <p class="text-muted">May I Help You?</p>
+                </div>
+                <span class="time text-muted small">01:32</span>
+            </div>
+
+            <div class="friend-list">
+                <img class="profile-image"
+                    src="https://pyxis.nymag.com/v1/imgs/dcd/a6c/b395da7812f82f824bae99792c61a16942-bumblebee.rsquare.w1200.jpg"
+                    alt="">
+                <div class="text">
+                    <h6>Aryan</h6>
+                    <p class="text-muted">Where Are You?</p>
+                </div>
+                <span class="time text-muted small">01:33</span>
+            </div>
+
+            <div class="friend-list">
+                <img class="profile-image"
+                    src="https://pyxis.nymag.com/v1/imgs/dcd/a6c/b395da7812f82f824bae99792c61a16942-bumblebee.rsquare.w1200.jpg"
+                    alt="">
+                <div class="text">
+                    <h6>Aryan</h6>
+                    <p class="text-muted">Where Are You?</p>
+                </div>
+                <span class="time text-muted small">01:33</span>
+            </div>
+
+            <div class="friend-list">
+                <img class="profile-image"
+                    src="https://pyxis.nymag.com/v1/imgs/dcd/a6c/b395da7812f82f824bae99792c61a16942-bumblebee.rsquare.w1200.jpg"
+                    alt="">
+                <div class="text">
+                    <h6>Aryan</h6>
+                    <p class="text-muted">Where Are You?</p>
+                </div>
+                <span class="time text-muted small">01:33</span>
+            </div>
+
+            <div class="friend-list">
+                <img class="profile-image"
+                    src="https://pyxis.nymag.com/v1/imgs/dcd/a6c/b395da7812f82f824bae99792c61a16942-bumblebee.rsquare.w1200.jpg"
+                    alt="">
+                <div class="text">
+                    <h6>Aryan</h6>
+                    <p class="text-muted">Where Are You?</p>
+                </div>
+                <span class="time text-muted small">01:33</span>
+            </div>
+
+            <div class="friend-list">
+                <img class="profile-image"
+                    src="https://pyxis.nymag.com/v1/imgs/dcd/a6c/b395da7812f82f824bae99792c61a16942-bumblebee.rsquare.w1200.jpg"
+                    alt="">
+                <div class="text">
+                    <h6>Aryan</h6>
+                    <p class="text-muted">Where Are You?</p>
+                </div>
+                <span class="time text-muted small">01:33</span>
+            </div>
+
+            <div class="friend-list">
+                <img class="profile-image"
+                    src="https://pyxis.nymag.com/v1/imgs/dcd/a6c/b395da7812f82f824bae99792c61a16942-bumblebee.rsquare.w1200.jpg"
+                    alt="">
+                <div class="text">
+                    <h6>Aryan</h6>
+                    <p class="text-muted">Where Are You?</p>
+                </div>
+                <span class="time text-muted small">01:33</span>
+            </div>
+
+            <div class="friend-list">
+                <img class="profile-image"
+                    src="https://pyxis.nymag.com/v1/imgs/dcd/a6c/b395da7812f82f824bae99792c61a16942-bumblebee.rsquare.w1200.jpg"
+                    alt="">
+                <div class="text">
+                    <h6>Aryan</h6>
+                    <p class="text-muted">Where Are You?</p>
+                </div>
+                <span class="time text-muted small">01:33</span>
+            </div>
+
+            <div class="friend-list">
+                <img class="profile-image"
+                    src="https://pyxis.nymag.com/v1/imgs/dcd/a6c/b395da7812f82f824bae99792c61a16942-bumblebee.rsquare.w1200.jpg"
+                    alt="">
+                <div class="text">
+                    <h6>Aryan</h6>
+                    <p class="text-muted">Where Are You?</p>
+                </div>
+                <span class="time text-muted small">01:33</span>
+            </div>
+        </div>
     </div>
-  </nav>
 
-  <div class="row">
-    <div class="column left" style="background-color:rgb(235, 235, 235);height: 700px;">
-      <div class="header"
-        style="font-size:20px;margin-top: 5px;background: rgb(177, 177, 177);padding: 10px 15px;border-radius: 7px;">
-        Friends</h2>
-        <a style="font-size:24px;float: right;" href="addUser.ejs" class="fa">&#xf067;</a>
-      </div>
-      <hr>
-      <div class="friend-list">
-        <img class="profile-image"
-          src="https://cdn.dribbble.com/users/1577045/screenshots/4914645/dribble_pic.png?compress=1&resize=400x300"
-          alt="">
-        <div class="text">
-          <h6>Avikal</h6>
-          <p class="text-muted">What's Your Update?</p>
+        <div class="column right" style="background-color:rgb(255, 255, 255);">
+            <div class="settings-tray">
+                <div class="friend-name">
+                    <img class="profile-image"
+                        src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/robocop.jpg" alt="">
+                    <div class="text">
+                        <h6>Robo Cop</h6>
+                        <p class="text-muted">Last Online 01:35</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12" style="height: 640px;overflow:auto;">
+                <div class="chat-panel">
+                    <div class="row no-gutters">
+                        <div class="col-md-3">
+                            <div class="chat-bubble chat-bubble--left">
+                                Hi....!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-md-3 offset-md-9">
+                            <div class="chat-bubble chat-bubble--right">
+                                Hlw....!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-md-3">
+                            <div class="chat-bubble chat-bubble--left">
+                                Hi....!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-md-3 offset-md-9">
+                            <div class="chat-bubble chat-bubble--right">
+                                Hlw....!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-md-3">
+                            <div class="chat-bubble chat-bubble--left">
+                                Hi....!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-md-3 offset-md-9">
+                            <div class="chat-bubble chat-bubble--right">
+                                Hlw....!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-md-3">
+                            <div class="chat-bubble chat-bubble--left">
+                                Hi....!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-md-3 offset-md-9">
+                            <div class="chat-bubble chat-bubble--right">
+                                Hlw....!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-md-3">
+                            <div class="chat-bubble chat-bubble--left">
+                                Hi....!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-md-3 offset-md-9">
+                            <div class="chat-bubble chat-bubble--right">
+                                Hlw....!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-md-3">
+                            <div class="chat-bubble chat-bubble--left">
+                                Hi....!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-md-3 offset-md-9">
+                            <div class="chat-bubble chat-bubble--right">
+                                Hlw....!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-md-3">
+                            <div class="chat-bubble chat-bubble--left">
+                                Hi....!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-md-3 offset-md-9">
+                            <div class="chat-bubble chat-bubble--right">
+                                Hlw....!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="chat-box">
+                            <span style="font-size:25px;">&#128512;</span>
+                            <input type="text" placeholder="Type your message here...">
+                            <i style="font-size:25px" class="glyphicon glyphicon-paperclip"></i>
+                            <i style="font-size:25px" class="glyphicon glyphicon-send"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <span class="time text-muted small">01:32</span>
-      </div>
-
-      <div class="friend-list">
-        <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/optimus-prime.jpeg"
-          alt="">
-        <div class="text">
-          <h6>Aayush</h6>
-          <p class="text-muted">May I Help You?</p>
-        </div>
-        <span class="time text-muted small">01:32</span>
-      </div>
-
-      <div class="friend-list">
-        <img class="profile-image"
-          src="https://pyxis.nymag.com/v1/imgs/dcd/a6c/b395da7812f82f824bae99792c61a16942-bumblebee.rsquare.w1200.jpg"
-          alt="">
-        <div class="text">
-          <h6>Aryan</h6>
-          <p class="text-muted">Where Are You?</p>
-        </div>
-        <span class="time text-muted small">01:33</span>
-      </div>
-    </div>
-
-    <div class="column right" style="background-color:rgb(255, 255, 255);">
-      <div class="settings-tray">
-        <div class="friend-name">
-          <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/robocop.jpg"
-            alt="">
-          <div class="text">
-            <h6>Robo Cop</h6>
-            <p class="text-muted">Last Online 01:35</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12" style="height: 640px;overflow:auto;">
-        <div class="chat-panel">
-          <div class="row no-gutters">
-            <div class="col-md-3">
-              <div class="chat-bubble chat-bubble--left">
-                Hi....!
-              </div>
-            </div>
-          </div>
-          <div class="row no-gutters">
-            <div class="col-md-3 offset-md-9">
-              <div class="chat-bubble chat-bubble--right">
-                Hlw....!
-              </div>
-            </div>
-          </div>
-          <div class="row no-gutters">
-            <div class="col-md-3">
-              <div class="chat-bubble chat-bubble--left">
-                Hi....!
-              </div>
-            </div>
-          </div>
-          <div class="row no-gutters">
-            <div class="col-md-3 offset-md-9">
-              <div class="chat-bubble chat-bubble--right">
-                Hlw....!
-              </div>
-            </div>
-          </div>
-          <div class="row no-gutters">
-            <div class="col-md-3">
-              <div class="chat-bubble chat-bubble--left">
-                Hi....!
-              </div>
-            </div>
-          </div>
-          <div class="row no-gutters">
-            <div class="col-md-3 offset-md-9">
-              <div class="chat-bubble chat-bubble--right">
-                Hlw....!
-              </div>
-            </div>
-          </div>
-          <div class="row no-gutters">
-            <div class="col-md-3">
-              <div class="chat-bubble chat-bubble--left">
-                Hi....!
-              </div>
-            </div>
-          </div>
-          <div class="row no-gutters">
-            <div class="col-md-3 offset-md-9">
-              <div class="chat-bubble chat-bubble--right">
-                Hlw....!
-              </div>
-            </div>
-          </div>
-          <div class="row no-gutters">
-            <div class="col-md-3">
-              <div class="chat-bubble chat-bubble--left">
-                Hi....!
-              </div>
-            </div>
-          </div>
-          <div class="row no-gutters">
-            <div class="col-md-3 offset-md-9">
-              <div class="chat-bubble chat-bubble--right">
-                Hlw....!
-              </div>
-            </div>
-          </div>
-          <div class="row no-gutters">
-            <div class="col-md-3">
-              <div class="chat-bubble chat-bubble--left">
-                Hi....!
-              </div>
-            </div>
-          </div>
-          <div class="row no-gutters">
-            <div class="col-md-3 offset-md-9">
-              <div class="chat-bubble chat-bubble--right">
-                Hlw....!
-              </div>
-            </div>
-          </div>
-          <div class="row no-gutters">
-            <div class="col-md-3">
-              <div class="chat-bubble chat-bubble--left">
-                Hi....!
-              </div>
-            </div>
-          </div>
-          <div class="row no-gutters">
-            <div class="col-md-3 offset-md-9">
-              <div class="chat-bubble chat-bubble--right">
-                Hlw....!
-              </div>
-            </div>
-          </div>
-          <div class="col-12">
-            <div class="chat-box">
-              <span style="font-size:25px;">&#128512;</span>
-              <input type="text" placeholder="Type your message here...">
-              <i style="font-size:25px" class="glyphicon glyphicon-paperclip"></i>
-              <i style="font-size:25px" class="glyphicon glyphicon-send"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
 </body>
 

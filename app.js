@@ -1,7 +1,6 @@
 const express = require('express')
 const path = require('path')
 const http = require('http')
-const favicon = require('serve-favicon');
 
 const app = express();
 
@@ -17,20 +16,11 @@ app.get('/index', function (req, res, next) {
   res.render(`${publicDirectoryPath}index.ejs`)
 })
 
-app.get('/forgot', function (req, res, next) {
-  res.render(`${publicDirectoryPath}forgot.ejs`)
-})
-
-app.get('/signup', function (req, res, next) {
-  res.render(`${publicDirectoryPath}signup.ejs`)
-})
-
 app.get('/addUser', function (req, res, next) {
     res.render(`${publicDirectoryPath}addUser.ejs`)
   })
 
 app.use(express.static(publicDirectoryPath))
-
 
 app.use(express.json())
 
