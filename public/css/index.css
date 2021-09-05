@@ -122,10 +122,12 @@
   }
   
   .friend-name {
-    padding: 10px 15px;
+    margin-top: -10px;
+    /* padding: 10px 15px; */
     display: flex;
     vertical-align: baseline;
-    background: #fff;
+    background: rgb(177, 177, 177);
+    /* background: #fff; */
     transition: 0.3s ease;
   }
   

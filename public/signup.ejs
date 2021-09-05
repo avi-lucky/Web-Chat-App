@@ -9,17 +9,23 @@
 
 <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="/">Web Chat-App</a>
-    <a class="btn btn-primary" href="/signup"> Sign Up </a>
+    <a class="btn btn-primary" href="/"> Sign In </a>
 </nav>
 
 <body>
     <div class="container">
         <div id="wrapper">
             <div class="card text-center">
-                <h5 class="card-header">LogIn</h5>
+                <h5 class="card-header">Register</h5>
                 <div class="card-body">
                     <img src="./img/profile-picture.png" height="134" width="134"><br><br>
-                    <form action="/login" method="post">
+                    <form action="/register" method="post">
+                        <div class="input-group">
+                            <div class="input-group-prepend"><span class="input-group-text" id="basic-addon1"><i
+                                        class="fas fa-user"></i></span></div>
+                            <input class="form-control" id="name" type="text" placeholder="Name" id="name" required
+                                maxlength="30">
+                        </div><br>
                         <div class="input-group">
                             <div class="input-group-prepend"><span class="input-group-text" id="basic-addon1"><i
                                         class="fas fa-user"></i></span></div>
@@ -32,23 +38,20 @@
                             <input class="form-control" name="password" type="password" placeholder="Password"
                                 id="password" required maxlength="30">
                         </div><br>
-                        <button onclick="logIn()" action="logIn" class="btn btn-primary" type="submit" form="nameform"
-                            value="Submit" style="width:100%;">LogIn</button>
+                        <div class="input-group">
+                            <div class="input-group-prepend"><span class="input-group-text" id="basic-addon1"><i
+                                        class="fas fa-lock"></i></span></div>
+                            <input class="form-control" name="password" type="password" placeholder="Confirm Password"
+                                id="confirmPassword" required maxlength="30">
+                        </div><br>
+                        <button onclick="signUp()" action="signUp" class="btn btn-primary" type="submit" form="nameform"
+                            value="Submit" style="width:100%;">Sign Up</button>
                     </form>
-                    <button onclick="forgotPassword()" action="forgotPassword" class="btn btn-primary" type="submit"
-                        form="nameform" value="Submit" style="width:100%;">Forgot Password</button>
                 </div>
             </div><br>
         </div>
-
-        <script>
-            function forgotPassword() {
-                location.replace("http://localhost:3000/forgot")
-            }
-        </script>
-
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <!-- <script src="./signin.js"></script> -->
+        <!-- <script src="./signup.js"></script> -->
 
 </body>
 
