@@ -66,4 +66,20 @@ router.post('/users/logout', auth, async (req, res) => {
     }
 })
 
+// Forgot Password
+router.patch('/users/forgot', async (req, res) => {
+    const updates = Object.keys(req.body)
+    const allowedUpdates = ['password']
+    try {
+        await User.updateOne({password: req.body.password})
+        const user  = await User.findOne({email: req.body.email})
+        res.status(200).send(user)
+        if (!user)
+        return res.status(400).send("User With Given Email Doesn't Exist!")
+     } catch (e) {
+            console.log(e)
+            res.status(500).send(e)
+        }
+})
+
 module.exports = router
