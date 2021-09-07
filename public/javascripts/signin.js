@@ -20,24 +20,24 @@ function logIn() {
   })
 }
 
-// // Forgot Password
-// function submit() {
-//     const email = document.getElementById("email").value
-//     const newPassword = document.getElementById("newPassword").value
-//     const confirmPassword = document.getElementById("confirmPassword").value
-//     console.log(email)
-//     console.log(newPassword)
-//     console.log(confirmPassword)
-//     axios.patch("/users/forgot", {
-//       email: email,
-//       password: newPassword
-//     })
-//     .then(function (response) {
-//       console.log(response)
-//       console.log(response.data)
-//       location.replace('http://localhost:3000')
-//     })
-//     .catch(function (error) {
-//       console.log(error)
-//     })
-//   }
+// Forgot Password
+function submit() {
+    const email = document.getElementById("email").value
+    const newPassword = document.getElementById("newPassword").value
+    const confirmPassword = document.getElementById("confirmPassword").value
+    console.log(email)
+    console.log(newPassword)
+    console.log(confirmPassword)
+    axios.patch("/users/forgot", {
+      email: email,
+      password: newPassword
+    })
+    .then(function (response) {
+      console.log(response)
+      console.log(response.data)
+      location.replace('http://localhost:3000')
+    })
+    .catch(function (error) {
+      console.log(error)
+    })
+  }
