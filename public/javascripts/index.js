@@ -1,3 +1,13 @@
+// axios.get('/tasks', {
+//     headers: {
+//       Authorization: ('Bearer ', localStorage.getItem("token"))
+//     },
+//   })
+//   .then(function (response) {
+//     console.log(response);
+//     console.log(response.data)
+//   })
+
 // Logout User
 function logOut() {
     console.log(localStorage.getItem("token"))
