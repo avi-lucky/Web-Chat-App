@@ -22,22 +22,6 @@
     display: table;
     clear: both;
   }
-
-  /* .search-box {
-    background: #c0c0c0;
-    padding: 10px 13px;
-  }
-  
-  .search-box .input-wrapper {
-    background: #fff;
-    border-radius: 40px;
-  }
-  
-  .search-box .input-wrapper i {
-    color: grey;
-    margin-left: 2px;
-    vertical-align: middle;
-  } */
   
   input {
     border: none;
@@ -55,12 +39,6 @@
     vertical-align: middle;
     border-style: none;
   }
-  
-  /* .profile-image {
-    width: 50px;
-    height: 50px;
-    border-radius: 40px;
-  } */
   
   .friend-list {
     padding: 10px 15px;
