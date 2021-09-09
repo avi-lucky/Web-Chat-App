@@ -31,18 +31,48 @@ const userSchema = new mongoose.Schema({
             }
         }
     },
+    friends: [{
+        name: {
+            type: String,
+            required: true,
+            trim: true
+        },
+        email: {
+            type: String,
+            unique: true,
+            required: true,
+            trim: true,
+            lowercase: true,
+            validate(value) {
+                if (!validator.isEmail(value)) {
+                    throw new Error('Email is invalid')
+                }
+            }
+        }
+    }],
+    chat: [{
+        sender: {
+            type: String,
+            required: true,
+            trim: true
+        },
+        receiver: {
+            type: String,
+            required: true,
+            trim: true
+        },
+        messages: {
+            type: String,
+            required: true,
+            timestamps: true
+        },
+    }],
     tokens: [{
         token: {
             type: String,
             required: true
         }
     }]
-})
-
-userSchema.virtual('friends', {
-    ref: 'Friend',
-    localField: '_id',
-    foreignField: 'owner'
 })
 
 userSchema.methods.generateAuthToken = async function () {

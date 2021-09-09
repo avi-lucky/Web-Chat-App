@@ -69,9 +69,10 @@ router.post('/users/logout', auth, async (req, res) => {
 // Forgot Password
 router.patch('/users/forgot', async (req, res) => {
     const updates = Object.keys(req.body)
+    // console.log(req.body)
     const allowedUpdates = ['password']
     try {
-        await User.updateOne({password: req.body.password})
+        await User.updateOne({email: req.body.email}, {password: req.body.password})
         const user  = await User.findOne({email: req.body.email})
         res.status(200).send(user)
         if (!user)
