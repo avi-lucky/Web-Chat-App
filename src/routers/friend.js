@@ -19,9 +19,10 @@ router.post('/friends', auth, async (req, res) => {
 
 // Read All Friends
 router.get('/friends', auth, async (req, res) => {
+    // const user = await User.findOne({email:req.user.email})
     try {
-        const friend = await Friend.find({ owner: req.user.email })
-        res.send(friend)
+        const user = await User.findOne({email:req.user.email})
+        res.send(user.friends)
     } catch (e) {
         res.status(500).send(e)
     }
