@@ -29,7 +29,7 @@
         </div>
     </nav>
 
-    <div class="column left" style="background-color:rgb(235, 235, 235);height: 725px;">
+    <div class="column left" style="background-color:rgb(235, 235, 235);height: 725px; border-radius: 5px;">
         <div class="header"
             style="font-size:20px;margin-top: 5px;background: rgb(177, 177, 177);padding: 10px 15px;border-radius: 7px;">
             <h2>
@@ -154,8 +154,9 @@
                     <div class="chat-box">
                         <span style="font-size:25px;">&#128512;</span>
                         <input type="text" placeholder="Type your message here...">
-                        <i style="font-size:25px" class="glyphicon glyphicon-paperclip"></i>
-                        <i style="font-size:25px" class="glyphicon glyphicon-send"></i>
+                        <button style="font-size:25px; border:none;" class="glyphicon glyphicon-paperclip"></button>
+                        <button onclick="chatUser()" action="chatUser" type="submit" form="nameform" value="Submit"
+                            style="font-size:25px; border:none;" class="glyphicon glyphicon-send"></button>
                     </div>
                 </div>
             </div>

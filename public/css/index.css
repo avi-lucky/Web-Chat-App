@@ -53,9 +53,14 @@
     width: 70%;
   }
   
-  .friend-list .text h4 {
+  .friend-list .text h3 {
     margin-top: 6px;
     margin-bottom: 0;
+  }
+
+  .card {
+    margin-left: 20px;
+    border: none;
   }
 
   .h6, h6 {
@@ -101,6 +106,7 @@
   }
   
   .friend-name {
+    border-radius: 5px;
     margin-top: -10px;
     /* padding: 10px 15px; */
     display: flex;

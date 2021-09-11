@@ -10,7 +10,7 @@ axios.get('/friends', {
     {
       id = response.data[i]._id
       friends += `<div class="row-8">
-      <button id="${id}" class="card" onclick="openClick(event)" value="${response.data[i].name}"><h4>${response.data[i].name}</h4></button>
+      <button id="${id}" class="card" onclick="openClick(event)" value="${response.data[i].name}"><h3>${response.data[i].name}</h3></button>
       </div><br>`
     }
     document.getElementById('friends').innerHTML = friends
