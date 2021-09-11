@@ -26,6 +26,18 @@ const friendSchema = new mongoose.Schema({
     }
 })
 
+friendSchema.virtual('chats', {
+    ref: 'Chat',
+    localField: '_id',
+    foreignField: 'sender'
+})
+
+friendSchema.virtual('chats', {
+    ref: 'Chat',
+    localField: '_id',
+    foreignField: 'receiver'
+})
+
 const Friend = mongoose.model('Friend', friendSchema)
 
 module.exports = Friend
