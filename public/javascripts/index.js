@@ -31,6 +31,28 @@ axios.get('/friends', {
     // console.log(e.currentTarget.getAttribute('value').split(" ").join(""))
 }
 
+// Create Chat
+function chatUser() {
+  const receiver = document.getElementsByClassName('active')[0].id
+  console.log(receiver)
+  const message = document.getElementById("message").value
+  console.log(message)
+  axios.post('/chats', {
+    friend: receiver,
+    message: message
+  }, {
+    headers: {
+      Authorization : ('Bearer ', localStorage.getItem("token"))
+    }})
+    .then(function (response) {
+      console.log(response)
+      console.log(response.data)
+    })
+    .catch(function (error) {
+      console.log(error);
+    })
+}
+
 
 
 

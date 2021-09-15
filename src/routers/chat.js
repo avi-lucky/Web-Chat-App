@@ -10,6 +10,9 @@ router.post('/chats', auth, async (req, res) => {
         receiver: req.body.friend,
         message: req.body.message
     })
+    console.log(req.user.email)
+    console.log(req.body.friend)
+    console.log(req.body.message)
     try {
         await chat.save()
         res.status(201).send(chat)
