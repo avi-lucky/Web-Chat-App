@@ -15,6 +15,7 @@
     "mongoose": "^6.0.5",
     "mongoose-timestamp": "^0.6.0",
     "nodemon": "^2.0.12",
+    "socket.io": "^4.2.0",
     "validator": "^13.6.0"
   }
 }
