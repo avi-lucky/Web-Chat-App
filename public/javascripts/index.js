@@ -29,6 +29,31 @@ axios.get('/friends', {
     e.currentTarget.className += " active";
     document.getElementById('chatTitle').innerHTML = e.currentTarget.getAttribute('value')
     // console.log(e.currentTarget.getAttribute('value').split(" ").join(""))
+    // List All Chats
+axios.get('/chats', {
+  headers: {
+    Authorization: ('Bearer ', localStorage.getItem("token"))
+  },
+})
+.then(function (response) {
+  var chat = ''
+  friendId = document.getElementsByClassName('active')[0].id
+  for (i = 0; i < response.data.length; i++) 
+  {
+    if(response.data[i].sender == 'avikal@gmail.com' && response.data[i].receiver == friendId) {
+      console.log("Hello if")
+      chat += `<div class="chat-panel" id=${i}><h3>${response.data[i].message}</h3></div>`
+    }
+    else if(response.data[i].sender == friendId && response.data[i].receiver == 'avikal@gmail.com'){
+      console.log("Hello else-if")
+      chat += `<div class="chat-panel" id=${i}><h3>${response.data[i].message}</h3></div>`
+    }
+  }
+  document.getElementById('messenger').innerHTML = chat
+})
+.catch(function (error) {
+  console.log(error)
+});
 }
 
 // Create Chat
@@ -52,21 +77,6 @@ function chatUser() {
       console.log(error);
     })
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
