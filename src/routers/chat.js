@@ -11,9 +11,6 @@ router.post('/chats', auth, async (req, res) => {
         receiver: req.body.friend,
         message: req.body.message
     })
-    // console.log(req.user.email)
-    // console.log(req.body.friend)
-    // console.log(req.body.message)
     try {
         await chat.save()
         res.status(201).send(chat)
@@ -25,7 +22,8 @@ router.post('/chats', auth, async (req, res) => {
 // List All Chats
 router.get('/chats', auth, async (req, res) => {
     try {
-        const chat = await Chat.find({ sender: req.user.email })
+        const chat = await Chat.find()
+        // const chat = await Chat.find({$or:[{sender: ${sender}}, {receiver: ${receiver}}]}, $and:[{sender: ${sender}}, {receiver: ${receiver}}])
         res.send(chat)
     } catch (e) {
         res.status(500).send(e)

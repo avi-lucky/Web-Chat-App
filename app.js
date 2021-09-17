@@ -10,27 +10,27 @@ const app = express();
 
 const publicDirectoryPath = path.join(__dirname, '/public/')
 
-app.get('/', function (req, res, next) {
-  // console.log(publicDirectoryPath)
-  res.render(`${publicDirectoryPath}signin.ejs`)
-  // console.log('Successfully User Created!')
+app.get('/', function(req, res, next) {
+    // console.log(publicDirectoryPath)
+    res.render(`${publicDirectoryPath}signin.ejs`)
+        // console.log('Successfully User Created!')
 })
 
-app.get('/forgot', function (req, res, next) {
-  res.render(`${publicDirectoryPath}forgot.ejs`)
+app.get('/forgot', function(req, res, next) {
+    res.render(`${publicDirectoryPath}forgot.ejs`)
 })
 
-app.get('/signup', function (req, res, next) {
-  res.render(`${publicDirectoryPath}signup.ejs`)
+app.get('/signup', function(req, res, next) {
+    res.render(`${publicDirectoryPath}signup.ejs`)
 })
 
-app.get('/index', function (req, res, next) {
-  res.render(`${publicDirectoryPath}index.ejs`)
+app.get('/index', function(req, res, next) {
+    res.render(`${publicDirectoryPath}index.ejs`)
 })
 
-app.get('/addFriend', function (req, res, next) {
+app.get('/addFriend', function(req, res, next) {
     res.render(`${publicDirectoryPath}addFriend.ejs`)
-  })
+})
 
 app.use(express.static(publicDirectoryPath))
 

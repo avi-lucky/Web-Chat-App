@@ -108,11 +108,9 @@
   .friend-name {
     border-radius: 5px;
     margin-top: -10px;
-    /* padding: 10px 15px; */
     display: flex;
     vertical-align: baseline;
     background: rgb(177, 177, 177);
-    /* background: #fff; */
     transition: 0.3s ease;
   }
   
@@ -128,7 +126,7 @@
   
   .chat-bubble {
     padding: 10px 14px;
-    background: #eee;
+    background: #93c8e2;
     margin: 10px 30px;
     border-radius: 9px;
     position: relative;
@@ -154,7 +152,7 @@
     height: 100%;
     width: 100%;
   }
-  
+
   .offset-md-9 .chat-bubble {
     background: #74b9ff;
     color: #fff;
@@ -191,7 +189,7 @@
     min-width: 7px;
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
-    max-width: 25%;
+    max-width: 23%;
   }
   
   .chat-bubble--left:after {
