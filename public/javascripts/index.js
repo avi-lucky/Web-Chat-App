@@ -50,7 +50,7 @@ function inboxMsg() {
                 if (response.data[i].sender == ownerEmail && response.data[i].receiver == friendId) {
                     chat += `<div class="chat-panel col-md-3 offset-md-9 chat-bubble chat-bubble--right" id=${i}><h4>${response.data[i].message}</h4></div>`
                 } else if (response.data[i].sender == friendId && response.data[i].receiver == ownerEmail) {
-                    chat += `<div class="chat-panel col-md-3 chat-bubble chat-bubble--left" id=${i}><h4>${response.data[i].message}</h4></div>`
+                    chat += `<div class="chat-panel col-md-3 offset-md-9 chat-bubble--left" id=${i}><h4>${response.data[i].message}</h4></div>`
                 }
             }
             document.getElementById('messenger').innerHTML = chat
@@ -75,8 +75,9 @@ function chatUser() {
             }
         })
         .then(function(response) {
-            console.log(response)
-            console.log(response.data)
+            location.reload()
+                // console.log(response)
+                // console.log(response.data)
         })
         .catch(function(error) {
             console.log(error);
