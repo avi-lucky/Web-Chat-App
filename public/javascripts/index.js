@@ -1,4 +1,5 @@
 // List All Friends
+var ownerEmail
 axios.get('/friends', {
         headers: {
             Authorization: ('Bearer ', localStorage.getItem("token"))
@@ -6,15 +7,17 @@ axios.get('/friends', {
     })
     .then(function(response) {
         var friends = ''
+        var flag = "card active"
         for (i = 0; i < response.data.length; i++) {
             id = response.data[i].email
-            friends += `<div class="row-8">
-      <button id="${id}" class="card" onclick="openClick(event)" value="${response.data[i].name}"><h3>${response.data[i].name}</h3></button>
-      </div><br>`
+            friends += `<div class="row-8"><button id="${id}" class="${flag}" onclick="openClick(event)" value="${response.data[i].name}"><h3>${response.data[i].name}</h3></button></div><br>`
+            flag = "card"
         }
         document.getElementById('friends').innerHTML = friends
         document.getElementById('chatTitle').innerHTML = response.data[0].name
         document.getElementById('ownerId').innerHTML = response.data[0].owner
+        ownerEmail = response.data[0].owner
+        inboxMsg(window[document.getElementById('messenger').innerHTML])
     })
     .catch(function(error) {
         console.log(error)
@@ -28,9 +31,13 @@ function openClick(e) {
     }
     e.currentTarget.className += " active";
     document.getElementById('chatTitle').innerHTML = e.currentTarget.getAttribute('value')
-        // console.log(e.currentTarget.getAttribute('value').split(" ").join(""))
+    inboxMsg(window[e.currentTarget.getAttribute('value').split(" ").join("")])
+}
 
-    // List All Chats
+// List All Chats
+function inboxMsg() {
+    // const inbox = document.getElementById('inbox').value
+    // console.log(inbox)
     axios.get('/chats', {
             headers: {
                 Authorization: ('Bearer ', localStorage.getItem("token"))
@@ -39,11 +46,10 @@ function openClick(e) {
         .then(function(response) {
             var chat = ''
             friendId = document.getElementsByClassName('active')[0].id
-                // ownerId = document.getElementsByClassName('owner')[0].id
             for (i = 0; i < response.data.length; i++) {
-                if (response.data[i].sender == "avikal@gmail.com" && response.data[i].receiver == friendId) {
+                if (response.data[i].sender == ownerEmail && response.data[i].receiver == friendId) {
                     chat += `<div class="chat-panel col-md-3 offset-md-9 chat-bubble chat-bubble--right" id=${i}><h4>${response.data[i].message}</h4></div>`
-                } else if (response.data[i].sender == friendId && response.data[i].receiver == "avikal@gmail.com") {
+                } else if (response.data[i].sender == friendId && response.data[i].receiver == ownerEmail) {
                     chat += `<div class="chat-panel col-md-3 chat-bubble chat-bubble--left" id=${i}><h4>${response.data[i].message}</h4></div>`
                 }
             }
@@ -77,12 +83,10 @@ function chatUser() {
         })
 }
 
-
-
 // Logout User
 function logOut() {
     console.log(localStorage.getItem("token"))
-    axios.post('/users/logout', {}, {
+    axios.post('/users/logout', {
         headers: {
             Authorization: ('Bearer ', localStorage.getItem("token"))
         }
