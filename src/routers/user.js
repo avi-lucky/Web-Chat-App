@@ -5,7 +5,7 @@ const auth = require('../middleware/auth')
 const router = new express.Router()
 
 // SignUp User
-router.post('/users', async (req, res) => {
+router.post('/users', async(req, res) => {
     const user = new User(req.body)
 
     try {
@@ -17,24 +17,24 @@ router.post('/users', async (req, res) => {
 })
 
 // LogIn User
-router.post('/users/login', async (req, res) => {
+router.post('/users/login', async(req, res) => {
     try {
-        const user = await User.findOne({email:req.body.email, password:req.body.password})
+        const user = await User.findOne({ email: req.body.email, password: req.body.password })
         const token = await user.generateAuthToken()
         res.send({ user, token })
     } catch (e) {
         console.log(e)
-        res.status(400).send()  
+        res.status(400).send()
     }
 })
 
 // Read LogIn User
-router.get('/users/me', auth, async (req, res) => {
+router.get('/users/me', auth, async(req, res) => {
     res.send(req.user)
- })
+})
 
- // Update User Profile
-router.patch('/users/me', auth, async (req, res) => {
+// Update User Profile
+router.patch('/users/me', auth, async(req, res) => {
     const updates = Object.keys(req.body)
     const allowedUpdates = ['name', 'password']
     const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
@@ -53,7 +53,7 @@ router.patch('/users/me', auth, async (req, res) => {
 })
 
 // LogOut User
-router.post('/users/logout', auth, async (req, res) => {
+router.post('/users/logout', auth, async(req, res) => {
     try {
         req.user.tokens = req.user.tokens.filter((token) => {
             return token.token !== req.token
@@ -67,20 +67,20 @@ router.post('/users/logout', auth, async (req, res) => {
 })
 
 // Forgot Password
-router.patch('/users/forgot', async (req, res) => {
+router.patch('/users/forgot', async(req, res) => {
     const updates = Object.keys(req.body)
-    // console.log(req.body)
+        // console.log(req.body)
     const allowedUpdates = ['password']
     try {
-        await User.updateOne({email: req.body.email}, {password: req.body.password})
-        const user  = await User.findOne({email: req.body.email})
+        await User.updateOne({ email: req.body.email }, { password: req.body.password })
+        const user = await User.findOne({ email: req.body.email })
         res.status(200).send(user)
         if (!user)
-        return res.status(400).send("User With Given Email Doesn't Exist!")
-     } catch (e) {
-            console.log(e)
-            res.status(500).send(e)
-        }
+            return res.status(400).send("User With Given Email Doesn't Exist!")
+    } catch (e) {
+        console.log(e)
+        res.status(500).send(e)
+    }
 })
 
 module.exports = router

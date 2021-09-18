@@ -21,21 +21,18 @@
                 <a class="navbar-brand" style="color: black;font-size: 22px;">Web Chat-App</a>
             </div>
             <nav class="nav navbar-nav navbar-right">
-                <button onclick="logOut()" action="logOut" class="btn btn-primary" type="submit" form="nameform"
-                    value="Submit"
-                    style="border-radius: 5px; background: rgba(91, 159, 223, .767); border: none; margin-right: 15px; margin-top: 4px; color: black; font-size: 22px;">
+                <a class="navbar-brand" id="ownerId" style="color: black;font-size: 22px;" href="#"></a>
+                <button onclick="logOut()" action="logOut" class="btn btn-primary" type="submit" form="nameform" value="Submit" style="border-radius: 5px; background: rgba(91, 159, 223, .767); border: none; margin-right: 15px; margin-top: 4px; color: black; font-size: 22px;">
                     Log Out </button>
             </nav>
         </div>
     </nav>
 
     <div class="column left" style="background-color:rgb(235, 235, 235);height: 725px; border-radius: 5px;">
-        <div class="header"
-            style="font-size:20px;margin-top: 5px;background: rgb(177, 177, 177);padding: 10px 15px;border-radius: 7px;">
+        <div class="header" style="font-size:20px;margin-top: 5px;background: rgb(177, 177, 177);padding: 10px 15px;border-radius: 7px;">
             <h2>
                 Friends</h2>
-            <a style="font-size:24px;float: right;margin-top: -40px;" href="http://localhost:3000/addFriend"
-                class="fa">&#xf067;</a>
+            <a style="font-size:24px;float: right;margin-top: -40px;" href="http://localhost:3000/addFriend" class="fa">&#xf067;</a>
         </div>
         <hr>
         <div class="row-8" style="overflow:auto;" id="friends">
@@ -54,14 +51,14 @@
             <div class="chat-panel" id="messenger">
                 <div class="row no-gutters">
                     <!-- <div class="col-md-3"> -->
-                        <!-- <div class="chat-bubble chat-bubble--left">
+                    <!-- <div class="chat-bubble chat-bubble--left">
                             Hi....!
                         </div> -->
                     <!-- </div> -->
                 </div>
                 <div class="row no-gutters">
                     <!-- <div class="col-md-3 offset-md-9"> -->
-                        <!-- <div class="chat-bubble chat-bubble--right">
+                    <!-- <div class="chat-bubble chat-bubble--right">
                             Hlw....!
                         </div> -->
                     <!-- </div> -->
@@ -72,8 +69,7 @@
                     <span style="font-size:25px;">&#128512;</span>
                     <input type="text" id="message" placeholder="Type your message here...">
                     <button style="font-size:25px; border:none;" class="glyphicon glyphicon-paperclip"></button>
-                    <button onclick="chatUser()" action="chatUser" id="send" type="submit" form="nameform"
-                        value="Submit" style="font-size:25px; border:none;" class="glyphicon glyphicon-send"></button>
+                    <button onclick="chatUser()" action="chatUser" id="send" type="submit" form="nameform" value="Submit" style="font-size:25px; border:none;" class="glyphicon glyphicon-send"></button>
                 </div>
             </div>
         </div>

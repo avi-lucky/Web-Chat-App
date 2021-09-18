@@ -14,6 +14,7 @@ axios.get('/friends', {
         }
         document.getElementById('friends').innerHTML = friends
         document.getElementById('chatTitle').innerHTML = response.data[0].name
+        document.getElementById('ownerId').innerHTML = response.data[0].owner
     })
     .catch(function(error) {
         console.log(error)
