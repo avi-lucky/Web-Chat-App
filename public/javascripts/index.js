@@ -36,8 +36,6 @@ function openClick(e) {
 
 // List All Chats
 function inboxMsg() {
-    // const inbox = document.getElementById('inbox').value
-    // console.log(inbox)
     axios.get('/chats', {
             headers: {
                 Authorization: ('Bearer ', localStorage.getItem("token"))
